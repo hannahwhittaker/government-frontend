@@ -7,7 +7,11 @@ class GuidePresenter < ContentItemPresenter
     if @part_slug
       "#{super}: #{current_part_title}"
     else
-      super
+      if current_part_title
+        "#{super}: #{current_part_title}"
+      else
+        super
+      end
     end
   end
 
